@@ -1,0 +1,27 @@
+.Button{
+    /* width: 70px; */
+    display: flex;
+    background-color: rgb(24, 2, 2);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-color: white;
+    border: 1px solid white;
+}
+
+.cartIcon{
+    width: 15px;
+    height: 15px;
+    padding: 0 5px;
+}
+
+.yourCart{
+    padding: 0 5px;
+}
+
+.cartCount{
+    padding: 0 7px;
+    background-color: maroon;
+    border-radius: 10px;
+}
