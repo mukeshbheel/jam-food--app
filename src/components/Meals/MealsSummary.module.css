@@ -1,0 +1,15 @@
+
+.mealsSummary{
+    margin-top: -50px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: white;
+    min-width: 500px;
+    max-width: 500px;
+    border: white solid 1px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px;
+    background-color: rgb(42, 39, 39);
+}
