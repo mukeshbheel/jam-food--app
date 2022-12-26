@@ -1,11 +1,15 @@
+import MealItemForm from './MealItemForm';
 import classes from './SingleMealItem.module.css';
 
 const SingleMealItem = props => {
-    const price = `${props.price.toFixed(2)}`;
-    return <li>
-        <h3>{props.name}</h3>
-        <p className={classes.desc}>{props.description}</p>
-        <p className={classes.price}>{price}</p>
+    const price = `$ ${props.price}`;
+    return <li className={classes.singleMealItem}>
+        <div className={classes.details}>
+            <p className={classes.name}>{props.name}</p>
+            <p className={classes.desc}>{props.desc}</p>
+            <p className={classes.price}>{price}</p>
+        </div>
+        <MealItemForm id={props.id} />
     </li>
 };
 

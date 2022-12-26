@@ -1,0 +1,11 @@
+.mealItemForm{
+    /* margin: auto 0px; */
+}
+
+.mealItemForm button{
+    color: white;
+    background-color: maroon;
+    border-radius: 50px;
+    width: 50%;
+    padding: 5px 0px;
+}
