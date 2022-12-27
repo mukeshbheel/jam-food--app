@@ -1,11 +1,36 @@
+.cart{
+    /* padding: 50px 5px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.cartUl{
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+    max-height: 20rem;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
 .total-amount{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0px;
+    margin: 10px 0px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .actions{
     display: flex;
     justify-content: end;
     margin: 20px 0px;
+}
+
+.close{
+    border-color: maroon;
+    color: maroon;
+    background-color: white;
+    margin-right: 5px;
 }
