@@ -1,14 +1,19 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState, useContext } from "react";
 import classes from './Header.module.css';
 import mainImage from '../../assets/meals.jpg';
 import HeaderCartButton from './HeaderCartButton';
+import CartContext from "../../store/cart-context";
 
 const Header = props => {
+
+
+
+
     return <Fragment>
-        <header className={classes.header}>
+        <div className={classes.header}>
             <h1>Jam Meals</h1>
             <HeaderCartButton onShowCart={props.onShowCart} />
-        </header>
+        </div>
         <div className={classes['main-image']}>
             <img src={mainImage} alt="main" />
         </div>

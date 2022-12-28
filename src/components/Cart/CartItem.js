@@ -6,12 +6,12 @@ const CartItem = props => {
             <div className={classes.name}>{props.name}</div>
             <div className={classes.details}>
                 <div className={classes.price}>{`$${props.price.toFixed(2)}`}</div>
-                <div className={classes.box}>{`x${props.amount}`}</div>
+                <div className={classes.amount}>{`x${props.amount}`}</div>
             </div>
         </div>
         <div className={classes.action}>
-            <div className={classes.box}>-</div>
-            <div className={classes.box}>+</div>
+            <button className={classes.box} onClick={props.onMinus}>-</button>
+            <button className={classes.box} onClick={props.onPlus} >+</button>
         </div>
     </li>
 };

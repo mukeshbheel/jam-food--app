@@ -11,9 +11,30 @@ import CartItem from "./CartItem";
 
 const Cart = props => {
 
+    const plusHandler = item => {
+        cartCtx.addItem({
+            ...item,
+            amount: 1
+        });
+    };
+
+    const minusHandler = id => {
+        cartCtx.removeItem(id);
+    };
+
     const cartCtx = useContext(CartContext);
     const cartTotal = `$${cartCtx.total.toFixed(2)}`
-    const cartItems = <ul className={classes.cartUl}>{cartCtx.items.map(item => <CartItem id={item.id} key={item.id} price={item.price} amount={item.amount} name={item.name}></CartItem>)}</ul>
+    const cartItems = <ul className={classes.cartUl}>
+        {cartCtx.items.map(item =>
+            <CartItem
+                id={item.id}
+                key={item.id}
+                price={item.price}
+                amount={item.amount}
+                name={item.name}
+                onPlus={plusHandler.bind(null, item)}
+                onMinus={minusHandler.bind(null, item.id)}
+            ></CartItem>)}</ul>
 
     return <Modal onClose={props.onClose} className={classes.cart}>
         {cartItems}
